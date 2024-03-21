@@ -20,7 +20,7 @@ module.exports = async function (fastify, opts) {
             }
           },
           500: {
-            $ref: 'shared#/definitions/internalServerErrorResponse'
+            $ref: 'internalServerErrorResponse#'
           }
         }
       }

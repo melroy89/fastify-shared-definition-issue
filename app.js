@@ -31,19 +31,14 @@ module.exports = async function (fastify, opts) {
 
   // Register shared generic intenral server response schema
   await fastify.addSchema({
-    $id: 'shared',
-    type: 'object',
-    definitions: {
-      internalServerErrorResponse: {
-        type: 'object',
-        description: '500 Internal Server Error',
-        properties: {
-          message: {
-            type: 'string',
-            description: 'Error message',
-            example: 'Some internal error message'
-          }
-        }
+    $id: 'internalServerErrorResponse',
+    type: 'object',       
+    description: '500 Internal Server Error',
+    properties: {
+      message: {
+        type: 'string',
+        description: 'Error message',
+        example: 'Some internal error message'
       }
     }
   })
